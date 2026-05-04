@@ -56,6 +56,7 @@ Use for 影響範囲 and 注意点. Capture what may break, what must be communi
    - PII.
    - Auth/access control.
    - Logs and DB persistence.
+   - AI/LLM 経由のデータ流出: which inputs/outputs may flow to LLM prompts, agent logs, vector stores, or external model APIs; redaction or allowlist rules; opt-out for sensitive tenants.
 4. **未決事項**
    - Decisions needed before implementation.
    - Decisions that may be deferred.

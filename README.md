@@ -1,6 +1,6 @@
 # Software Design Docs
 
-`software-design-docs` is a Codex skill for creating implementation-ready software design documents from feature ideas, conversations, existing code, existing documents, or requirements memos.
+`software-design-docs` is a Skill for Claude Code and Codex (compatible with both) for creating implementation-ready software design documents from feature ideas, conversations, existing code, existing documents, or requirements memos.
 
 This is not a generic PRD skill. Use it when product intent needs to become engineering-ready documentation: requirements, basic design, detailed design, DB/API/batch/screen design, test viewpoints, impact scope, cautions, and open issues.
 
@@ -45,6 +45,7 @@ Load only the files needed for the requested deliverables.
 | Batch design | [`references/batch-design.md`](references/batch-design.md) |
 | Screen design | [`references/screen-design.md`](references/screen-design.md) |
 | Test viewpoints | [`references/test-viewpoints.md`](references/test-viewpoints.md) |
+| Observability (logs/metrics/traces/alerts/SLO) | [`references/observability.md`](references/observability.md) |
 | Impact scope and cautions | [`references/impact-and-cautions.md`](references/impact-and-cautions.md) |
 | Example documentation patterns | [`references/kabureka-patterns.md`](references/kabureka-patterns.md) |
 
@@ -76,6 +77,7 @@ Load only the files needed for the requested deliverables.
     |-- document_indexing.md
     |-- impact-and-cautions.md
     |-- kabureka-patterns.md
+    |-- observability.md
     |-- requirements.md
     |-- screen-design.md
     `-- test-viewpoints.md

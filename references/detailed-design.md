@@ -29,8 +29,10 @@ Use for 詳細設計書. Define implementation behavior precisely enough that an
    - Secret handling.
    - PII masking.
    - Injection/XSS/SSRF/path traversal concerns where relevant.
+   - When a sub-item does not apply, write `該当なし: <reason>` instead of omitting it, so reviewers can distinguish "considered and excluded" from "forgotten".
 7. **ログ・監視**
    - Logs, metrics, audit trails, alerts, operator-visible states.
+   - **ログイベント一覧**: event name, level (debug/info/warn/error), included fields, PII masking policy, sampling/rate, destination (stdout, file, external sink).
 8. **試験観点リンク**
    - Unit, feature, integration, E2E, migration, security, operational checks.
 9. **決定事項・未決事項**
@@ -44,3 +46,4 @@ Use for 詳細設計書. Define implementation behavior precisely enough that an
 - Failure behavior is explicit for every external dependency and destructive operation.
 - Data writes are clear enough to derive migration and test work.
 - Detailed design does not contradict higher-level documents.
+- Security sub-items not applicable to this module are explicitly marked `該当なし: <reason>`, never silently omitted.

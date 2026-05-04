@@ -9,6 +9,8 @@ description: Create a consistent software design document set from a feature ide
 
 Create implementation-ready software design documents as a coherent, contradiction-resistant set. Prefer Markdown output; when the user asks for Google Docs, first produce stable Markdown content, then use the Google Drive/Docs workflow to publish or update Docs without changing the structure.
 
+This skill is designed to work with both Claude Code and Codex. Frontmatter follows the Claude Code Skill convention; the workflow itself is agent-agnostic.
+
 Do not use this as a generic PRD skill. This skill starts where product intent becomes implementation planning: requirements, architecture, data contracts, screens, batches, tests, impact, and operational cautions.
 
 The main job is document consistency, not template filling. Requirements define what and why; basic design defines system shape; detailed design defines implementation behavior; DB/API/batch/screen/test/impact/caution documents must align with those upstream decisions.
@@ -44,6 +46,7 @@ Load only the reference files needed for the requested deliverables:
 - `references/batch-design.md` for バッチ設計.
 - `references/screen-design.md` for 画面設計.
 - `references/test-viewpoints.md` for 試験観点.
+- `references/observability.md` for 可観測性設計 (logs, metrics, traces, alerts, SLO).
 - `references/impact-and-cautions.md` for 影響範囲 and 注意点.
 - `references/kabureka-patterns.md` only as an example of a well-structured project documentation set; never treat it as a universal rule.
 
@@ -56,3 +59,13 @@ Load only the reference files needed for the requested deliverables:
 - Mark non-goals explicitly when they prevent likely scope creep.
 - Mark estimates and unverified assumptions explicitly. Do not present guessed performance, cost, volume, dates, compatibility, or external service behavior as measured fact.
 - Include a final consistency checklist with links or filenames when producing multiple documents.
+- Do not duplicate test viewpoints between `screen-design.md` and `test-viewpoints.md`. Screen design holds only viewpoints scoped to that single screen (rendering, interaction, error/empty states); cross-cutting viewpoints (regression, non-functional, integration, migration) belong in `test-viewpoints.md`.
+- Use a single shared format for the "決定事項・未決事項" section in every template. Recommended table:
+
+  ```markdown
+  | Item | Status | Owner | Notes |
+  |---|---|---|---|
+  | <decision or question> | decided / assumption / open | <name or role> | <rationale, deadline, or next action> |
+  ```
+
+  `Status` values are limited to `decided`, `assumption`, or `open`. Each template body only needs the section heading; refer back to this format.

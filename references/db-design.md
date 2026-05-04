@@ -27,6 +27,9 @@ Use for DB設計. Define persistent data structures, relationships, constraints,
    - Backfill.
    - Rollback constraints.
    - Existing data impact.
+   - **Pre-deploy**: schema migrations to run before code release, dry-run checks, lock impact, expected duration.
+   - **Post-deploy**: backfills, index builds, data correction jobs to run after release; how to verify completion.
+   - **Rollback procedure**: exact steps to revert (down migration, restore-from-snapshot, feature flag flip), data loss window, who executes, success check.
 6. **セキュリティ・監査**
    - Sensitive columns.
    - Masking/encryption.
