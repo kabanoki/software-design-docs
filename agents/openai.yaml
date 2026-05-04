@@ -1,0 +1,4 @@
+interface:
+  display_name: "Software Design Docs"
+  short_description: "Create consistent software design document sets"
+  default_prompt: "Use $software-design-docs to create a complete software design document set from this feature request."
