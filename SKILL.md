@@ -1,6 +1,6 @@
 ---
 name: software-design-docs
-description: Create a consistent software design document set from a feature idea, conversation, existing codebase, existing documents, or requirements memo. Use when Codex needs to draft or revise requirements, basic design, detailed design, DB design, API design, batch design, screen/UI design, test viewpoints, impact scope, cautions, or implementation-ready pre-build documentation, especially before coding or when aligning multiple design documents.
+description: Create a consistent software design document set from a feature idea, conversation, existing codebase, existing documents, or requirements memo. Use when Claude Code or Codex needs to draft or revise requirements (要件定義書), basic design (基本設計書), detailed design (詳細設計書), DB design (DB設計), API design (API設計), batch design (バッチ設計), screen/UI design (画面設計), test viewpoints (試験観点), observability design (可観測性設計), impact scope (影響範囲), cautions (注意点), or implementation-ready pre-build documentation — especially before coding or when aligning multiple design documents.
 ---
 
 # Software Design Docs
