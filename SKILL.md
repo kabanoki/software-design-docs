@@ -25,9 +25,10 @@ The main job is document consistency, not template filling. Requirements define 
    2. Basic design
    3. Detailed design
    4. DB/API/batch/screen design
-   5. Test viewpoints
-   6. Impact scope
-   7. Cautions and open issues
+   5. Observability — produce as an independent document only when the feature has non-trivial operational, monitoring, alerting, or SLO requirements (most production APIs, batch jobs, and user-facing flows). For small internal utilities, the log/monitoring subsection inside detailed design is enough.
+   6. Test viewpoints
+   7. Impact scope
+   8. Cautions and open issues
 5. **Separate decisions from open items.** Every substantial document must include confirmed decisions, assumptions/defaults, and unresolved items.
 6. **Cross-check consistency.** Before finalizing, verify that DB/API/batch/screen designs do not contradict requirements, basic design, or detailed design.
 7. **Maintain navigation.** Update the document index after creating, moving, or archiving docs. Archive old documents instead of deleting them when history may matter.

@@ -42,7 +42,7 @@ Use for 試験観点. Create acceptance and verification viewpoints, not just lo
    - Status.
    - Evidence command or manual check.
    - Notes.
-8. **未確認・保留**
+8. **決定事項・未決事項**
 
 ## Quality Bar
 
