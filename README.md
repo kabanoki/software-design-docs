@@ -4,6 +4,37 @@
 
 これは汎用的な PRD 作成 Skill ではありません。プロダクト意図を、要件定義、基本設計、詳細設計、DB/API/バッチ/画面設計、試験観点、影響範囲、注意事項、未決事項といったエンジニアリング向けドキュメントへ落とし込むときに使います。
 
+## 導入方法
+
+このリポジトリを任意の場所に clone し、リポジトリ直下に `SKILL.md` がある状態で配置します。
+
+```bash
+git clone <repo-url> software-design-docs
+cd software-design-docs
+```
+
+### Codex
+
+Codex ではユーザーの Skill ディレクトリにこのリポジトリを配置します。開発中はコピーよりもシンボリックリンクにしておくと、このリポジトリの変更がそのまま反映されます。
+
+```bash
+mkdir -p ~/.codex/skills
+ln -s "$(pwd)" ~/.codex/skills/software-design-docs
+```
+
+すでに同名の Skill がある場合は、既存ディレクトリを退避または削除してからリンクを作成してください。導入後、新しい Codex セッションで `software-design-docs` を使うよう依頼します。
+
+### Claude Code
+
+Claude Code ではユーザー全体で使う場合は `~/.claude/skills/` に配置します。
+
+```bash
+mkdir -p ~/.claude/skills
+ln -s "$(pwd)" ~/.claude/skills/software-design-docs
+```
+
+特定プロジェクトだけで使う場合は、そのプロジェクト配下の `.claude/skills/software-design-docs` にコピーまたはリンクしてください。導入後、Claude Code の `/skills` で表示を確認し、`/software-design-docs` または通常の依頼文で起動します。
+
 ## 使う場面
 
 この Skill は、次のような場面で使います。
