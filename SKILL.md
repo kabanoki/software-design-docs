@@ -31,6 +31,7 @@ The main job is document consistency, not template filling. Requirements define 
    8. Cautions and open issues
 5. **Separate decisions from open items.** Every substantial document must include confirmed decisions, assumptions/defaults, and unresolved items.
 6. **Cross-check consistency.** Before finalizing, verify that DB/API/batch/screen/observability/test/impact/caution documents do not contradict requirements, basic design, or detailed design.
+   For split design docs, also verify that each INDEX, frontmatter block, related links, and bidirectional references agree.
 7. **Maintain navigation.** Update the document index after creating, moving, or archiving docs. Archive old documents instead of deleting them when history may matter.
 8. **Respect doc-first rules.** If the project requires specification updates before implementation, update or draft the relevant documents before proposing code changes.
 
@@ -48,13 +49,15 @@ Load only the reference files needed for the requested deliverables:
 - `references/screen-design.md` for 画面設計.
 - `references/test-viewpoints.md` for 試験観点.
 - `references/observability.md` for 可観測性設計 (logs, metrics, traces, alerts, SLO).
+- `references/split-design-docs.md` for scoped or split design docs, including one file per endpoint/table/batch/screen, dedicated common spec files, and INDEX navigation rules.
 - `references/impact-and-cautions.md` for 影響範囲 and 注意点.
 - `references/kabureka-patterns.md` only as an example of a well-structured project documentation set; never treat it as a universal rule.
 
 ## Output Rules
 
 - Use the project's document location and naming rules when present.
-- For a new project with no structure, propose a minimal `Documents/INDEX.md` and place docs under `Documents/`.
+- For a new project with no structure, propose a minimal `Documents/INDEX.md` and place docs under `Documents/`; for scoped split design docs, use the `Documents/design/` layout in `references/split-design-docs.md` unless the user or project rules say otherwise.
+- When the user requests a single document type, endpoint, table, batch, screen, or common specification, produce only that scoped deliverable and mention related upstream/downstream items only as consistency context.
 - Keep each document concise enough to be maintained, but complete enough for another engineer or agent to implement without guessing.
 - Avoid duplicating the same facts across documents. Requirements define what and why; basic design defines system shape; detailed design defines implementation behavior; individual designs define contracts.
 - Mark non-goals explicitly when they prevent likely scope creep.
