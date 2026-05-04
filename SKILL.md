@@ -30,7 +30,7 @@ The main job is document consistency, not template filling. Requirements define 
    7. Impact scope
    8. Cautions and open issues
 5. **Separate decisions from open items.** Every substantial document must include confirmed decisions, assumptions/defaults, and unresolved items.
-6. **Cross-check consistency.** Before finalizing, verify that DB/API/batch/screen designs do not contradict requirements, basic design, or detailed design.
+6. **Cross-check consistency.** Before finalizing, verify that DB/API/batch/screen/observability/test/impact/caution documents do not contradict requirements, basic design, or detailed design.
 7. **Maintain navigation.** Update the document index after creating, moving, or archiving docs. Archive old documents instead of deleting them when history may matter.
 8. **Respect doc-first rules.** If the project requires specification updates before implementation, update or draft the relevant documents before proposing code changes.
 
