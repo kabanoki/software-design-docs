@@ -35,6 +35,18 @@ The main job is document consistency, not template filling. Requirements define 
 7. **Maintain navigation.** Update the document index after creating, moving, or archiving docs. Archive old documents instead of deleting them when history may matter.
 8. **Respect doc-first rules.** If the project requires specification updates before implementation, update or draft the relevant documents before proposing code changes.
 
+## Update Rules
+
+- Before revising an existing document, read the target file and nearest index first. Preserve existing headings, table columns, naming, voice, and terminology unless the user asks for restructuring.
+- Prefer surgical updates to the affected sections. Do not rewrite whole documents, reorganize folders, or regenerate unrelated deliverables unless the user explicitly asks.
+- If a matching existing file is found, update it instead of creating a new file.
+- When an upstream document changes, check downstream documents that depend on it and update only the affected sections. If downstream updates cannot be completed safely, record the impact as an `open` entry in the downstream document's "決定事項・未決事項" table and link back to the upstream change when practical.
+- If a downstream document contradicts an upstream requirement or design decision, do not silently rewrite the upstream source. Call out the mismatch and update only when the source of truth is clear.
+- For split design docs, update related `INDEX.md`, frontmatter, body links, bidirectional references, and `design_status` in the same change.
+- For split design docs, do not duplicate common specifications inside individual files; update links to the common spec instead.
+- Treat deprecation as `design_status: deprecated` plus index updates. When the user asks to delete a document, prefer archive unless they explicitly reject archive and request hard deletion.
+- Do not fill unknowns with invented details; record them as `assumption` or `open` entries in the "決定事項・未決事項" table.
+
 ## Reference Loading
 
 Load only the reference files needed for the requested deliverables:
