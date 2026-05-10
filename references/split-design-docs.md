@@ -1,11 +1,12 @@
 # Split Design Docs
 
-Use when creating or updating scoped design documents, especially one file per API endpoint, DB table, batch, screen, or detailed design item. Batch design is split per batch in the same way API design is split per endpoint. Detailed design is process-first: split by use case or process by default, and split complex implementation responsibilities only when they are worth unit testing. Shared rules and conventions are not embedded in individual files; write them as dedicated common specification files. Do not split existing monolithic documents automatically; use this only for new documents, explicit split requests, or additive updates where split docs are already the project pattern.
+Use when creating or updating scoped design documents, especially one file per API endpoint, DB table, batch, screen, or detailed design item. Batch design is split per batch in the same way API design is split per endpoint. Detailed design is process-first: split by use case or process by default, and split complex implementation responsibilities only when they are worth unit testing. Shared rules and conventions are not embedded in individual files; write them as dedicated common specification files. Do not split existing monolithic documents automatically; use this only for new documents, explicit split requests, or additive updates where split docs are already the project pattern. For approved migrations from oversized monolithic documents, use `references/monolith-design-splitting.md`.
 
 ## Contents
 
 - [Precedence](#precedence)
 - [Standard Layout](#standard-layout)
+- [Existing Monoliths](#existing-monoliths)
 - [INDEX Tables](#index-tables)
 - [File Naming](#file-naming)
 - [Frontmatter](#frontmatter)
@@ -58,6 +59,10 @@ Documents/design/
 Create one file per API endpoint, one file per DB table, one file per batch, one file per screen, and one file per detailed design item. For detailed design, use `processes/` for use cases and flows, `components/` for complex services/repositories/validators/components/commands, and `jobs/` for detailed job internals. Keep one flat `detailed/INDEX.md` so processes, components, and jobs can be reviewed together. Create common specification files only under `common/`; do not inline shared environment, authentication, authorization, response, validation, error, or logging rules into individual endpoint, table, batch, screen, or detailed files.
 
 For monorepos or multiple services, add a service layer such as `Documents/design/api/<service>/...` only when the user or project rules require it. Otherwise assume a single-service layout.
+
+## Existing Monoliths
+
+For new documents and explicit scoped requests, use the fine-grained one-file-per-endpoint/table/batch/screen rules above. For a first split of an existing oversized monolith, do not jump straight to maximal granularity unless the user asks; follow `references/monolith-design-splitting.md`, preserve source content, switch canonical links safely, and only then consider further fine-grained splits for high-traffic areas.
 
 ## INDEX Tables
 

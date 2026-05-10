@@ -69,6 +69,7 @@ ln -s "$(pwd)" ~/.claude/skills/software-design-docs
 |---|---|
 | 要件定義 | [`references/requirements.md`](references/requirements.md) |
 | ドキュメント配置、索引、アーカイブ、メタデータ規則 | [`references/document_indexing.md`](references/document_indexing.md) |
+| 巨大な既存設計書の安全な分割・正本切替 | [`references/monolith-design-splitting.md`](references/monolith-design-splitting.md) |
 | 基本設計 | [`references/basic-design.md`](references/basic-design.md) |
 | 詳細設計 | [`references/detailed-design.md`](references/detailed-design.md) |
 | DB設計 | [`references/db-design.md`](references/db-design.md) |
@@ -109,6 +110,7 @@ ln -s "$(pwd)" ~/.claude/skills/software-design-docs
     |-- document_indexing.md
     |-- impact-and-cautions.md
     |-- kabureka-patterns.md
+    |-- monolith-design-splitting.md
     |-- observability.md
     |-- requirements.md
     |-- screen-design.md

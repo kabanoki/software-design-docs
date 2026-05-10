@@ -34,6 +34,7 @@ The main job is document consistency, not template filling. Requirements define 
    For split design docs, also verify that each INDEX, frontmatter block, related links, and bidirectional references agree.
 7. **Maintain navigation.** Update the document index after creating, moving, or archiving docs. Archive old documents instead of deleting them when history may matter.
 8. **Respect doc-first rules.** If the project requires specification updates before implementation, update or draft the relevant documents before proposing code changes.
+9. **Propose splits for oversized monoliths.** Before substantial updates to oversized existing design documents, propose a safe split instead of continuing to grow the monolith. Treat updates that touch multiple major sections, add or rewrite roughly 100+ lines, or require repeated loading of unrelated sections as substantial. Do not split without user approval.
 
 ## Update Rules
 
@@ -53,6 +54,7 @@ Load only the reference files needed for the requested deliverables:
 
 - `references/requirements.md` for 要件定義書.
 - `references/document_indexing.md` for document placement, index, archive, reference-scope, and AI-readable metadata rules.
+- `references/monolith-design-splitting.md` when updating or substantially extending existing design documents, to detect oversized docs, propose safe splits, switch canonical links, and verify migration quality.
 - `references/basic-design.md` for 基本設計書.
 - `references/detailed-design.md` for 詳細設計書.
 - `references/db-design.md` for DB設計.
